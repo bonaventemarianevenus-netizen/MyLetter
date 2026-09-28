@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Special+Elite&display=swap');
+
+
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #4a3030;
+
+    font-family: "Special Elite", monospace;
+}
+/* =========================
+   HOME PAGE
+   ========================= */
+
+.home {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+    padding: 55px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 245, 247, 0.88);
+
+    border-radius: 35px;
+
+    box-shadow: 0 10px 35px rgba(90, 50, 50, 0.20);
+}
+
+
+.home h1 {
+    margin: 0 0 15px;
+
+    font-family: "Monsieur La Doulaise", cursive;
+
+    font-size: 72px;
+    font-weight: normal;
+
+    color: #6e454f;
+}
+
+
+.home > p {
+    margin: 0 0 45px;
+
+    font-size: 18px;
+
+    color: #4a3030;
+}
+
+
+/* =========================
+   ENVELOPE GRID
+   ========================= */
+
+.envelope-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px 40px;
+
+    align-items: start;
+}
+
+
+.envelope {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #4a3030;
+
+    transition: transform 0.3s ease;
+}
+
+
+.envelope:hover {
+    transform: translateY(-8px);
+}
+
+
+.envelope img {
+    width: 180px;
+    height: 140px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+.envelope:hover img {
+    transform: scale(1.08);
+}
+
+
+.envelope p {
+    margin: 15px 0 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   BIRTHDAY LETTER PAGE
+   ========================= */
+
+.letter-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+
+/* Main letter size */
+
+.letter-container {
+    position: relative;
+    width: 650px;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+
+
+/* Actual letter image */
+.letter-paper {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   BIRTHDAY MESSAGE
+   ========================= */
+
+.letter-text {
+    position: absolute;
+
+    /* move text down */
+    top: 18%;
+
+    /* make text area narrower */
+    left: 15%;
+    width: 70%;
+
+    text-align: center;
+    color: #4a3030;
+}
+
+/* Birthday title */
+
+.letter-text h1 {
+    margin: 0 auto 25px;
+
+    font-family: "Monsieur La Doulaise", cursive;
+
+    /* smaller title */
+    font-size: 30px;
+
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    color: #754b55;
+}
+
+.letter-text p {
+    margin: 0 auto;
+
+    font-family: "Special Elite", monospace;
+
+    /* smaller message */
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    color: #4a3030;
+}
+
+/* =========================
+   BACK TO ENVELOPES
+   ========================= */
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 11px 24px;
+
+    background: #d98f91;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    border-radius: 30px;
+
+    transition: all 0.3s ease;
+}
+
+
+.back-link:hover {
+    background: #b96f72;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE / SMALL SCREEN
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .home {
+        width: 94%;
+
+        padding: 40px 20px;
+    }
+
+
+    .home h1 {
+        font-size: 55px;
+    }
+
+
+    .envelope-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px 20px;
+    }
+
+
+    .envelope img {
+        width: 145px;
+        height: 115px;
+    }
+
+
+    .letter-container {
+        width: 95vw;
+    }
+
+
+    .letter-text {
+        top: 16%;
+
+        left: 10%;
+
+        width: 80%;
+    }
+
+
+    .letter-text h1 {
+        font-size: 28px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .letter-text p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONE
+   ========================= */
+
+@media (max-width: 450px) {
+
+    .home h1 {
+        font-size: 45px;
+    }
+
+
+    .envelope-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .letter-text {
+        top: 15%;
+
+        left: 9%;
+
+        width: 82%;
+    }
+
+
+    .letter-text h1 {
+        font-size: 23px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .letter-text p {
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+
+    .back-link {
+        font-size: 12px;
+
+        padding: 9px 18px;
+    }
+
+}
